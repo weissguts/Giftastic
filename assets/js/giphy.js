@@ -16,6 +16,8 @@ $(document).ready(function () {
         $(".giphyButton").click(function () {
 
             //Giphy API
+
+            //converts id of button clicked into a string.
             var searchGiphy = ((jQuery(this).attr('id')));
             console.log(searchGiphy);
 
@@ -34,25 +36,30 @@ $(document).ready(function () {
                 console.log(gifData);
 
                 for (var i = 0; i < gifData.length; i++) {
-                    
-                }
+                    var newDiv = $("<div class='col-md-4' id='giphyButtonIdTwo'>");
+                    jQuery(newDiv).attr("id",gifData[i].id);
 
-            })
+                    var aniGif = gifData[i].images.fixed_height.url;
+                    var stillGif = gifData[i].images.fixed_height_still.url;
+                    var displayImage = $("<img>");
 
+                    // displayImage.attr("src", stillGif);
+                    displayImage.attr("src", aniGif);
 
+                    newDiv.append(displayImage);
 
+                    $("#reactionsObtained").append(newDiv);
+
+                    //Grabs id of gif(element) clicked.
+                };
+
+            });
 
         });
     };
 
 
-
-
-
     createButtons();
-
-
-
 
 
 });
