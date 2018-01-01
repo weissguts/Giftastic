@@ -11,17 +11,23 @@ $(document).ready(function () {
             buttonGif.appendTo('#reactionButtons');
             jQuery(buttonGif).attr("id",topics[i].toString());
 
+
+
+        }
+
+        
+        $(".giphyButton").click(function () {
+            var giphyIdGrabber = ((jQuery(this).attr('id')));
+            console.log(giphyIdGrabber);
+
             //Giphy API
-            var searchGiphy = topics[i].toString();
+            var searchGiphy = giphyIdGrabber;
             // console.log(searchGiphy);
             var xhr = $.get("http://api.giphy.com/v1/gifs/search?q=" + searchGiphy + "&api_key=HzjdHhnihCZoCBnpSpRF4JPahUjiUMFu&limit=5");
             xhr.done(function(data) { console.log("success got data", data);
 
             });
 
-        }
-        $(".giphyButton").click(function () {
-            console.log((jQuery(this).attr('id')));
         });
     };
 
