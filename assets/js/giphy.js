@@ -22,7 +22,7 @@ $(document).ready(function () {
             var searchGiphy = ((jQuery(this).attr('id')));
             console.log(searchGiphy);
 
-            var xhr = "http://api.giphy.com/v1/gifs/search?q=" + searchGiphy + "&api_key=HzjdHhnihCZoCBnpSpRF4JPahUjiUMFu&limit=5";
+            var xhr = "https://api.giphy.com/v1/gifs/search?q=" + searchGiphy + "&api_key=HzjdHhnihCZoCBnpSpRF4JPahUjiUMFu&limit=10";
             $.ajax( {
                 method: 'GET',
                 url: xhr,
