@@ -29,8 +29,8 @@
       <file leaf-file-name="giphy.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/js/giphy.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="17" column="8" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+            <state relative-caret-position="792">
+              <caret line="36" column="20" lean-forward="false" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -72,10 +72,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1052" />
+    <option name="x" value="1350" />
     <option name="y" value="81" />
     <option name="width" value="1759" />
-    <option name="height" value="1230" />
+    <option name="height" value="1183" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -163,15 +163,15 @@
       <option name="presentableId" value="Default" />
       <updated>1514755579107</updated>
       <workItem from="1514755580740" duration="15000" />
-      <workItem from="1514755663501" duration="13107000" />
+      <workItem from="1514755663501" duration="14753000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13122000" />
+    <option name="totallyTimeSpent" value="14768000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1052" y="81" width="1759" height="1230" extended-state="0" />
+    <frame x="1350" y="81" width="1759" height="1183" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.012048192" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -230,8 +230,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/giphy.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="8" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+        <state relative-caret-position="792">
+          <caret line="36" column="20" lean-forward="false" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
           <folding />
         </state>
       </provider>

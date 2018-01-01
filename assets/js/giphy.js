@@ -10,23 +10,37 @@ $(document).ready(function () {
             var buttonGif = $('<button class="giphyButton" id="giphyButtonId">'+ topics[i] + '</button>');
             buttonGif.appendTo('#reactionButtons');
             jQuery(buttonGif).attr("id",topics[i].toString());
-
-
-
         }
 
-        
+        //When button clicked, takes the ID of that button and searched that within the Giphy API.
         $(".giphyButton").click(function () {
-            var giphyIdGrabber = ((jQuery(this).attr('id')));
-            console.log(giphyIdGrabber);
 
             //Giphy API
-            var searchGiphy = giphyIdGrabber;
-            // console.log(searchGiphy);
-            var xhr = $.get("http://api.giphy.com/v1/gifs/search?q=" + searchGiphy + "&api_key=HzjdHhnihCZoCBnpSpRF4JPahUjiUMFu&limit=5");
-            xhr.done(function(data) { console.log("success got data", data);
+            var searchGiphy = ((jQuery(this).attr('id')));
+            console.log(searchGiphy);
 
-            });
+            // var xhr = $.get("http://api.giphy.com/v1/gifs/search?q=" + searchGiphy + "&api_key=HzjdHhnihCZoCBnpSpRF4JPahUjiUMFu&limit=5");
+            // xhr.done(function(data) {
+            //     console.log("success got data", data);
+            //
+            // });
+
+            var xhr = "http://api.giphy.com/v1/gifs/search?q=" + searchGiphy + "&api_key=HzjdHhnihCZoCBnpSpRF4JPahUjiUMFu&limit=5";
+            $.ajax( {
+                method: 'GET',
+                url: xhr,
+            }).done(function (response) {
+                var gifData = response.data;
+                console.log(gifData);
+
+                for (var i = 0; i < gifData.length; i++) {
+                    
+                }
+
+            })
+
+
+
 
         });
     };
