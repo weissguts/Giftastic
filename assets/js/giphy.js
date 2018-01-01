@@ -3,10 +3,11 @@ $(document).ready(function () {
     var topics = ["Surprise","Laughter","Sad","OMG","Cmon man","Seinfeld","Curb Your Enthusiasm","Will Ferrell",
         "Dave Chappelle","Homer" ];
 
+
+
     //createButtons - Creates buttons via Jquery to HTML from topics array.
     function createButtons() {
         for (var i = 0; i < topics.length; i++) {
-            var buttonId = topics[i].toString();
             var buttonGif = $('<button class="giphyButton" id="giphyButtonId">'+ topics[i] + '</button>');
             buttonGif.appendTo('#reactionButtons');
             jQuery(buttonGif).attr("id",topics[i].toString());
@@ -21,12 +22,6 @@ $(document).ready(function () {
             var searchGiphy = ((jQuery(this).attr('id')));
             console.log(searchGiphy);
 
-            // var xhr = $.get("http://api.giphy.com/v1/gifs/search?q=" + searchGiphy + "&api_key=HzjdHhnihCZoCBnpSpRF4JPahUjiUMFu&limit=5");
-            // xhr.done(function(data) {
-            //     console.log("success got data", data);
-            //
-            // });
-
             var xhr = "http://api.giphy.com/v1/gifs/search?q=" + searchGiphy + "&api_key=HzjdHhnihCZoCBnpSpRF4JPahUjiUMFu&limit=5";
             $.ajax( {
                 method: 'GET',
@@ -40,12 +35,15 @@ $(document).ready(function () {
                     jQuery(newDiv).attr("id",gifData[i].id);
 
                     var aniGif = gifData[i].images.fixed_height.url;
+                    var rating = gifData[i].rating;
                     var stillGif = gifData[i].images.fixed_height_still.url;
                     var displayImage = $("<img>");
+                    var showRating = $("<p>").text("Rating: " + rating);
 
                     // displayImage.attr("src", stillGif);
                     displayImage.attr("src", aniGif);
 
+                    newDiv.append(showRating);
                     newDiv.append(displayImage);
 
                     $("#reactionsObtained").append(newDiv);
@@ -58,6 +56,17 @@ $(document).ready(function () {
         });
     };
 
+
+
+    //Add new giphy button to array on page from input box.
+    $('#addReaction').click(function (event) {
+        var newTopic = $('#reaction-input').val();
+        topics = [];
+        topics.push(newTopic);
+        console.log(topics);
+        createButtons();
+
+    });
 
     createButtons();
 
